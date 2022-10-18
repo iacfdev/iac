@@ -27,9 +27,9 @@ func main() {
 		dir, file := path.Split(c.Request.RequestURI)
 		ext := filepath.Ext(file)
 		if file == "" || ext == "" {
-			c.File("./ui/dist/ui/index.html")
+			c.File("./ui/index.html")
 		} else {
-			c.File("./ui/dist/ui/" + path.Join(dir, file))
+			c.File("./ui/" + path.Join(dir, file))
 		}
 	})
 
